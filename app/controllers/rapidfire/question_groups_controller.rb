@@ -51,7 +51,7 @@ module Rapidfire
 
     def question_group_params
       if Rails::VERSION::MAJOR == 4
-        params.require(:question_group).permit(:name).permit(:user_id)
+        params.require(:question_group).permit(:name, :user_id)
       else
         params[:question_group]
       end
