@@ -3,7 +3,7 @@ module Rapidfire
     before_filter :authenticate_administrator!, except: :index
 
     def index
-      @question_groups = QuestionGroup.where(user_id: @current_user.id)
+      @question_groups = QuestionGroup.where(user_id: current_user.id)
     end
 
     def new
